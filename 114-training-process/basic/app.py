@@ -33,7 +33,7 @@ def get_response():
         docs = db.similarity_search(user_input)
 
         # 使用 ChatOpenAI 啟動生成模型
-        llm = ChatOpenAI(model_name="gpt-4", temperature=0.5)
+        llm = ChatOpenAI(model_name="gpt-4o-mini", temperature=0.5)
         chain = load_qa_chain(llm, chain_type="stuff")
 
         # 啟動回調
